@@ -1,38 +1,44 @@
 project:
-  title: "AXI Lite Slave Receiver"
-  author: "Abishek"
+  title: "AXI4-Stream Receiver"
+  author: "Kamales D"
   discord: ""
-  description: "A simplified AXI4-Lite slave receiver"
+  description: "Simple AXI4-Stream style receiver using 8-bit data input."
   language: "Verilog"
-  clock_hz: 100000000
+  clock_hz: 1000000
+
   tiles: "1x1"
-  top_module: "tt_um_example"
+
+  top_module: "tt_um_kamales_axi_rx"
+
   source_files:
     - "project.v"
-  pinout:
-    ui[0]: "AWVALID"
-    ui[1]: "WVALID"
-    ui[2]: "BREADY"
-    ui[3]: "AWADDR0"
-    ui[4]: "AWADDR1"
-    ui[5]: "AWADDR2"
-    ui[6]: "AWADDR3"
-    ui[7]: "AWADDR4"
-    uo[0]: "DATA0"
-    uo[1]: "DATA1"
-    uo[2]: "DATA2"
-    uo[3]: "DATA3"
-    uo[4]: "DATA4"
-    uo[5]: "DATA5"
-    uo[6]: "DATA6"
-    uo[7]: "DATA7"
-    uio[0]: "WDATA0"
-    uio[1]: "WDATA1"
-    uio[2]: "WDATA2"
-    uio[3]: "WDATA3"
-    uio[4]: "WDATA4"
-    uio[5]: "WDATA5"
-    uio[6]: "WDATA6"
-    uio[7]: "WDATA7"
+
+pinout:
+  ui[0]: "TDATA[0]"
+  ui[1]: "TDATA[1]"
+  ui[2]: "TDATA[2]"
+  ui[3]: "TDATA[3]"
+  ui[4]: "TDATA[4]"
+  ui[5]: "TDATA[5]"
+  ui[6]: "TDATA[6]"
+  ui[7]: "TDATA[7]"
+
+  uo[0]: "RX_DATA[0]"
+  uo[1]: "RX_DATA[1]"
+  uo[2]: "RX_DATA[2]"
+  uo[3]: "RX_DATA[3]"
+  uo[4]: "RX_DATA[4]"
+  uo[5]: "RX_DATA[5]"
+  uo[6]: "RX_DATA[6]"
+  uo[7]: "RX_DATA[7]"
+
+  uio[0]: ""
+  uio[1]: ""
+  uio[2]: ""
+  uio[3]: ""
+  uio[4]: ""
+  uio[5]: ""
+  uio[6]: ""
+  uio[7]: ""
 
 yaml_version: 6
