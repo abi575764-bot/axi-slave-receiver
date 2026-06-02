@@ -1,44 +1,38 @@
 project:
-title: "AXI Lite Slave Receiver"
-author: "Abishek"
-discord: ""
-description: "A simplified AXI4-Lite slave receiver"
-language: "Verilog"
-clock_hz: 100000000
-
-tiles: "1x1"
-
-top_module: "tt_um_example"
-
-source_files:
-- "project.v"
-
-pinout:
-ui[0]: "AWVALID"
-ui[1]: "WVALID"
-ui[2]: "BREADY"
-ui[3]: "AWADDR0"
-ui[4]: "AWADDR1"
-ui[5]: "AWADDR2"
-ui[6]: "AWADDR3"
-ui[7]: "AWADDR4"
-
-uo[0]: "DATA0"
-uo[1]: "DATA1"
-uo[2]: "DATA2"
-uo[3]: "DATA3"
-uo[4]: "DATA4"
-uo[5]: "DATA5"
-uo[6]: "DATA6"
-uo[7]: "DATA7"
-
-uio[0]: "WDATA0"
-uio[1]: "WDATA1"
-uio[2]: "WDATA2"
-uio[3]: "WDATA3"
-uio[4]: "WDATA4"
-uio[5]: "WDATA5"
-uio[6]: "WDATA6"
-uio[7]: "WDATA7"
+  title: "AXI Lite Slave Receiver"
+  author: "Abishek"
+  discord: ""
+  description: "A simplified AXI4-Lite slave receiver"
+  language: "Verilog"
+  clock_hz: 100000000
+  tiles: "1x1"
+  top_module: "tt_um_example"
+  source_files:
+    - "project.v"
+  pinout:
+    ui[0]: "AWVALID"
+    ui[1]: "WVALID"
+    ui[2]: "BREADY"
+    ui[3]: "AWADDR0"
+    ui[4]: "AWADDR1"
+    ui[5]: "AWADDR2"
+    ui[6]: "AWADDR3"
+    ui[7]: "AWADDR4"
+    uo[0]: "DATA0"
+    uo[1]: "DATA1"
+    uo[2]: "DATA2"
+    uo[3]: "DATA3"
+    uo[4]: "DATA4"
+    uo[5]: "DATA5"
+    uo[6]: "DATA6"
+    uo[7]: "DATA7"
+    uio[0]: "WDATA0"
+    uio[1]: "WDATA1"
+    uio[2]: "WDATA2"
+    uio[3]: "WDATA3"
+    uio[4]: "WDATA4"
+    uio[5]: "WDATA5"
+    uio[6]: "WDATA6"
+    uio[7]: "WDATA7"
 
 yaml_version: 6
