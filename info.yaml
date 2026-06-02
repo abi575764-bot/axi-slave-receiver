@@ -8,7 +8,7 @@ project:
 
   tiles: "1x1"
 
-  top_module: "tt_um_kamales_axi_rx"
+  top_module: "tt_um_axi_rx"
 
   source_files:
     - "project.v"
