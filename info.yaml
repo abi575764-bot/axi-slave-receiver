@@ -1,6 +1,6 @@
 project:
-  title: "AXI4-Stream Receiver"
-  author: "Kamales D"
+  title: "axi slave receiver"
+  author: "Abishek"
   discord: ""
   description: "Simple AXI4-Stream style receiver using 8-bit data input."
   language: "Verilog"
