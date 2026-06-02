@@ -1,8 +1,8 @@
-project: "axi slave receiver"
+project:
 title: "AXI Lite Slave Receiver"
 author: "Abishek"
 discord: ""
-description: "A simplified AXI4-Lite slave receiver that stores incoming write data in an internal register."
+description: "A simplified AXI4-Lite slave receiver"
 language: "Verilog"
 clock_hz: 100000000
 
@@ -14,9 +14,6 @@ source_files:
 - "project.v"
 
 pinout:
-
-# Inputs
-
 ui[0]: "AWVALID"
 ui[1]: "WVALID"
 ui[2]: "BREADY"
@@ -26,18 +23,14 @@ ui[5]: "AWADDR2"
 ui[6]: "AWADDR3"
 ui[7]: "AWADDR4"
 
-# Outputs
-
-uo[0]: "DATA_OUT0"
-uo[1]: "DATA_OUT1"
-uo[2]: "DATA_OUT2"
-uo[3]: "DATA_OUT3"
-uo[4]: "DATA_OUT4"
-uo[5]: "DATA_OUT5"
-uo[6]: "DATA_OUT6"
-uo[7]: "DATA_OUT7"
-
-# Bidirectional pins
+uo[0]: "DATA0"
+uo[1]: "DATA1"
+uo[2]: "DATA2"
+uo[3]: "DATA3"
+uo[4]: "DATA4"
+uo[5]: "DATA5"
+uo[6]: "DATA6"
+uo[7]: "DATA7"
 
 uio[0]: "WDATA0"
 uio[1]: "WDATA1"
