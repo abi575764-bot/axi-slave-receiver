@@ -1,31 +1,37 @@
-# How it works
+<!---
 
-This project implements a simplified AXI4-Lite Slave Receiver using Verilog. The design accepts write address and write data inputs through a reduced AXI-like interface suitable for Tiny Tapeout's limited I/O pins.
+This file is used to generate your project datasheet. Please fill in the information below and delete any unused
+sections.
 
-When both AWVALID and WVALID are asserted, the slave captures the incoming write data and stores it in an internal register. The stored value is continuously displayed on the output pins. The design demonstrates the basic concepts of AXI slave communication, including VALID/READY handshaking and register-based data storage.
+You can also include images in this folder and reference them in the markdown. Each image must be less than
+512 kb in size, and the combined size of all images must be less than 1 MB.
+-->
 
-# How to test
+# AXI4-Stream Receiver
 
-1. Apply reset by driving `rst_n` low.
-2. Release reset by driving `rst_n` high.
-3. Set the write address on `ui_in[7:3]`.
-4. Apply write data on `uio_in[7:0]`.
-5. Assert `AWVALID` (`ui_in[0]`) and `WVALID` (`ui_in[1]`).
-6. Wait for a rising edge of the clock.
-7. Observe the stored value on `uo_out[7:0]`.
-8. Assert `BREADY` (`ui_in[2]`) to complete the write response transaction.
+## How it works
+
+This project implements a simplified AXI4-Stream receiver.
+
+Incoming 8-bit data is applied to the input pins and sampled on the rising edge of the clock. The received value is stored in an internal register and driven to the output pins.
+
+The design demonstrates the basic concept of receiving streaming data synchronized to a clock.
+
+## How to test
+
+1. Apply reset.
+2. Drive an 8-bit value on the input pins.
+3. Wait for a rising clock edge.
+4. Observe the same value on the output pins.
 
 Example:
 
-* Address = 0x00
-* Data = 0x55
-* AWVALID = 1
-* WVALID = 1
+| Input | Output |
+| ----- | ------ |
+| 0x55  | 0x55   |
+| 0xAA  | 0xAA   |
+| 0xF0  | 0xF0   |
 
-After a clock edge, the output should display 0x55.
-
-# External hardware
+## External hardware
 
 No external hardware is required.
-
-The project uses only the Tiny Tapeout input, output, clock, and reset pins. Testing can be performed entirely in simulation or on a Tiny Tapeout chip without additional peripherals.
